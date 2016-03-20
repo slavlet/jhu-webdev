@@ -1,0 +1,116 @@
+/********** Base styles **********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/********** navbar styles **********/
+
+#navbar, #navbar .navbar-header, #nav-list {
+    margin: 0;
+}
+
+#navbar .navbar-brand {
+    margin-left: 0em;
+}
+
+#navbar {
+    border-color: #bbb;
+}
+
+/********** collapsable-nav styles **********/
+
+#collapsable-nav {
+    padding: 0;
+    background-color: #ddd;
+}
+
+#collapsable-nav ul,
+#collapsable-nav li[role="separator"].divider {
+    border-bottom: 1px solid #bbb;
+}
+
+#collapsable-nav li > a {
+    color: #777;
+    background-color: transparent;
+    font-size: 1.2em;
+}
+
+#collapsable-nav li > a:hover,
+#collapsable-nav li > a:active {
+    color: #5e5e5e;
+}
+
+#collapsable-nav.in ~ #our-menu {
+    top: 160px;
+}
+
+
+/********** main content styles **********/
+
+#our-menu {
+    position: absolute;
+    top: calc(122px - 1em);
+    margin: 1em 0 1em;
+    padding: 0 1em;
+    width: 100%;
+}
+
+#our-menu section {
+    background-color: #ddd;
+    height: 1000px;
+}
+
+#our-menu section > h2 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+#our-menu section > p {
+    margin: 0;
+    padding: .5em 1em 1em;
+}
+
+#our-menu .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#our-menu .col-xs-12,
+#our-menu .col-sm-6,
+#our-menu .col-sm-12,
+#our-menu .col-md-4 {
+    margin: 1em;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    #our-menu .col-sm-6 {
+        width: calc(50% - 2em);
+    }
+    #our-menu .col-sm-12 {
+        width: calc(100% - 2em);
+    }
+    #collapsable-nav.in ~ #our-menu {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #our-menu .col-md-4 {
+        width: calc(33.33% - 2em);
+    }
+}
+
